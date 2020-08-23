@@ -29,15 +29,16 @@ public class ProductServiceImpl implements ProductService {
 	private BuyProductRepository buyProductRepository;
 
 	@Override
-	public Product createProduct(CreateProductDTO userDto) throws ProductException{
+	public Product createProduct(CreateProductDTO userDto) throws ProductException {
 		Product entity = new Product();
 		BeanUtils.copyProperties(userDto, entity);
 		entity.setCreatedProductDate(new Date());
+		entity.setStatusProduct(StatusProduct.NOT_SOLD);
 		return repository.save(entity);
 	}
 
 	@Override
-	public void updateProduct(UpdateProductDTO updateProductDto)throws ProductException {
+	public void updateProduct(UpdateProductDTO updateProductDto) throws ProductException {
 		Optional<Product> product = repository.findById(updateProductDto.getIdProduct());
 		Product productEntity = product.get();
 		productEntity.setProductDescription(updateProductDto.getProductDescription());
@@ -47,12 +48,12 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void deleteProduct(String id)throws ProductException {
+	public void deleteProduct(String id) throws ProductException {
 		repository.deleteById(id);
 	}
 
 	@Override
-	public BoughtProducts buyProduct(BuyProductDTO buyProductDTO) throws ProductException{
+	public BoughtProducts buyProduct(BuyProductDTO buyProductDTO) throws ProductException {
 
 		Product productEntity = updateProductStatus(buyProductDTO);
 		BoughtProducts boughtProductsEntity = new BoughtProducts();
