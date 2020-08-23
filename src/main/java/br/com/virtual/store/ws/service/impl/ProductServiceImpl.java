@@ -77,8 +77,9 @@ public class ProductServiceImpl implements ProductService {
 
 	private String barCodeMock() {
 		Random randomNumber = new Random();
-		String barCodeMock = randomNumber.nextInt(6) + "." + randomNumber.nextInt(5) + "." + randomNumber.nextInt(3)
-				+ ".0." + randomNumber.nextInt(6) + "-" + randomNumber.nextInt(4) + "000000" + randomNumber.nextInt(3);
+		String barCodeMock = randomNumber.nextInt(6000) + "." + randomNumber.nextInt(50000) + "."
+				+ randomNumber.nextInt(3) + ".0." + randomNumber.nextInt(60000) + "-" + randomNumber.nextInt(40000)
+				+ "000000" + randomNumber.nextInt(3000);
 		return barCodeMock;
 	}
 
