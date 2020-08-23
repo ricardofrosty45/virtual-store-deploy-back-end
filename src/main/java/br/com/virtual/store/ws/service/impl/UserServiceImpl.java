@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
 	private void checkIfUserExists(CreateUserDTO userDto) throws CreateUserException {
 		User user = userRepository.findByEmail(userDto.getEmail());
-		if (user.getEmail() != null) {
+		if (user != null) {
 			throw new CreateUserException(CreateUserEnumErrors.ACCOUNT_EXISTS.message,
 					CreateUserEnumErrors.ACCOUNT_EXISTS.wrongField, CreateUserEnumErrors.ACCOUNT_EXISTS.errorCode);
 		}
