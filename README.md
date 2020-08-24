@@ -31,7 +31,7 @@ Abra seu cmd na pasta onde contem o docker file e rode esse comando
 
 - VIRTUAL-STORE-PROJECT
 
-This project was a challeged soo i've made a api using Java 11 / Spring boot / Mongodb / Docker
+This project was a challege soo i've made a api using Java 11 / Spring boot / Mongodb / Docker
 and the front end i used React js and firebase to make the auths but it's not done yet (front end)
 
 Este projeto foi um desafio, então eu desenvolvi esta api usando java 11 / Spring Boot / Mongo Db / Docker
