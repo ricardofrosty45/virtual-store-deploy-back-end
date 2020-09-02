@@ -56,13 +56,12 @@ public class CheckRequestTest {
 		buyProductRequests.setProductValue(new BigDecimal(1));
 		checkRequests.checkUpdateProductRequests(buyProductRequests);
 	}
-	
-	
+
 	@Test(expected = ProductException.class)
 	public void checkUpdateProductRequestsUpdateProductRequestsIsNullTest() throws ProductException {
 		checkRequests.checkUpdateProductRequests(null);
 	}
-	
+
 	@Test(expected = ProductException.class)
 	public void checkUpdateProductRequestsProductIdIsNullTest() throws ProductException {
 		UpdateProductRequest buyProductRequests = new UpdateProductRequest();
@@ -72,7 +71,7 @@ public class CheckRequestTest {
 		buyProductRequests.setProductValue(new BigDecimal(1));
 		checkRequests.checkUpdateProductRequests(buyProductRequests);
 	}
-	
+
 	@Test(expected = ProductException.class)
 	public void checkUpdateProductRequestsProductIdIsEmptyTest() throws ProductException {
 		UpdateProductRequest buyProductRequests = new UpdateProductRequest();
@@ -82,7 +81,7 @@ public class CheckRequestTest {
 		buyProductRequests.setProductValue(new BigDecimal(1));
 		checkRequests.checkUpdateProductRequests(buyProductRequests);
 	}
-	
+
 	@Test(expected = ProductException.class)
 	public void checkUpdateProductRequestsProductDescriptionIsNullTest() throws ProductException {
 		UpdateProductRequest buyProductRequests = new UpdateProductRequest();
@@ -92,7 +91,7 @@ public class CheckRequestTest {
 		buyProductRequests.setProductValue(new BigDecimal(1));
 		checkRequests.checkUpdateProductRequests(buyProductRequests);
 	}
-	
+
 	@Test(expected = ProductException.class)
 	public void checkUpdateProductRequestsProductDescriptionIsEmptyTest() throws ProductException {
 		UpdateProductRequest buyProductRequests = new UpdateProductRequest();
@@ -102,7 +101,7 @@ public class CheckRequestTest {
 		buyProductRequests.setProductValue(new BigDecimal(1));
 		checkRequests.checkUpdateProductRequests(buyProductRequests);
 	}
-	
+
 	@Test(expected = ProductException.class)
 	public void checkUpdateProductRequestsProductNameIsNullTest() throws ProductException {
 		UpdateProductRequest buyProductRequests = new UpdateProductRequest();
