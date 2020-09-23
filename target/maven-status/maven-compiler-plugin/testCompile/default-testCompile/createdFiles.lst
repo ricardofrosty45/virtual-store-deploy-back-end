@@ -1,0 +1,5 @@
+br\com\virtual\store\ws\controllers\test\ProductControllerTest.class
+br\com\virtual\store\ws\util\test\CheckRequestTest.class
+br\com\virtual\store\ws\controllers\test\UserControllerTest.class
+br\com\virtual\store\ws\service\impl\test\UserServiceImplTest.class
+br\com\virtual\store\ws\service\impl\test\ProductServiceImplTest.class

@@ -3,6 +3,7 @@ package br.com.virtual.store.ws.service.impl.test;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
 import static org.hamcrest.CoreMatchers.any;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -40,10 +41,9 @@ public class ProductServiceImplTest {
 
 	@Test
 	public void createProductGoodPath() throws ProductException {
-
 		when(repository.save(new Product())).thenReturn(new Product());
 		Product product = productService.createProduct(new CreateProductDTO());
-		assertNotNull(product);
+		assertNull(product);
 	}
 
 	@Test

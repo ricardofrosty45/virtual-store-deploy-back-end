@@ -1,5 +1,4 @@
 br\com\virtual\store\ws\request\BuyProductRequest.class
-br\com\virtual\store\ws\bean\config\BeanConfigs.class
 br\com\virtual\store\ws\enums\DeleteUserEnumErrors.class
 br\com\virtual\store\ws\response\CreatedProductResponse.class
 br\com\virtual\store\ws\dto\CreateProductDTO.class
@@ -43,6 +42,7 @@ br\com\virtual\store\ws\enums\StatusProduct.class
 br\com\virtual\store\ws\dto\GetUserDTO.class
 br\com\virtual\store\ws\request\GetUserDetailRequest.class
 br\com\virtual\store\ws\request\UpdateUserRequest.class
+br\com\virtual\store\ws\swagger\config\SwaggerConfig.class
 br\com\virtual\store\ws\entities\User.class
 br\com\virtual\store\ws\entities\Product.class
 br\com\virtual\store\ws\response\CreatedProductResponse$Builder.class

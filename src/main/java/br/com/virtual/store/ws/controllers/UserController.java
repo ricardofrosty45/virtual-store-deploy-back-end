@@ -31,6 +31,7 @@ import br.com.virtual.store.ws.response.CreateErrorResponse;
 import br.com.virtual.store.ws.response.CreatedUserResponse;
 import br.com.virtual.store.ws.response.GetUserResponse;
 import br.com.virtual.store.ws.service.UserService;
+import br.com.virtual.store.ws.service.impl.UserServiceImpl;
 import br.com.virtual.store.ws.util.CheckRequest;
 
 @CrossOrigin
