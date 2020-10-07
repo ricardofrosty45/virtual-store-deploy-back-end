@@ -33,8 +33,6 @@ public class ClientSpendingsController {
 			return new ResponseEntity<AllClientSpendingsResponse>(
 					new AllClientSpendingsResponse.Builder().withClientSpendings(allClientsSpendings).Build(),
 					HttpStatus.FOUND);
-		} catch (ProductException e1) {
-			return CreateErrorResponse.createResponseErrorForProduct(e1);
 		} catch (Exception e2) {
 			return CreateErrorResponse.createGenericResponse(e2);
 		}
