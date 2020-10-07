@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "ada26395-a759-48f0-ae6d-0716c605af98",
+		"name": "Virtual Store - Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User - PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"birthDate\": \"15-07-1998\",\r\n  \"documentNumber\": \"16608010400\",\r\n  \"email\": \"marianegmail@gmail.com\",\r\n  \"name\": \"Mariane Fernanda Da Costa\",\r\n  \"userAdresses\": [\r\n    {\r\n      \"streetName\": \"Rua Jose Bonifacio\",\r\n      \"zipCode\": \"54365061\",\r\n      \"houseNumber\":\"12D\"\r\n    },\r\n    {\r\n      \"streetName\": \"Av Trindade\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"216\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product - PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productDescription\": \"This guitar is awesome! it got two Malagoli pickups to mess with\",\r\n  \"productValue\": 11000,\r\n  \"productName\": \"Cort Gold Nova II - With Malagoli Pickups\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/product",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Product - PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProduct\":\"5f7d68e9fa598d59ac2e888c\",\r\n    \"clientId\":\"5f7d69aafa598d59ac2e8890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com//v1/product/buy",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"",
+						"v1",
+						"product",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Client Spendings - PRD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/all",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"spendings",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User - LocalHost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"birthDate\": \"15-07-1998\",\r\n  \"documentNumber\": \"10821107445\",\r\n  \"email\": \"luanricardo4554@gmail.com\",\r\n  \"name\": \"Luan Ricardo De Luna Vieira Venancio\",\r\n  \"userAdresses\": [\r\n    {\r\n      \"streetName\": \"Av Encanta Moça\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"408\"\r\n    },\r\n    {\r\n      \"streetName\": \"Av Trindade\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"216\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product - LocalHost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productDescription\": \"This guitar is awesome! it got two Malagoli pickups to mess with\",\r\n  \"productValue\": 11000,\r\n  \"productName\": \"Cort Gold Nova II - With Malagoli Pickups\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Product - LocalHost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProduct\":\"5f7d57805964ef26a1096df2\",\r\n    \"clientId\":\"5f7d5c69cf7955046ec1891e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/product/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"product",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
