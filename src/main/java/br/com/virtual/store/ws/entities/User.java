@@ -1,5 +1,6 @@
 package br.com.virtual.store.ws.entities;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import org.springframework.data.annotation.Id;
@@ -20,6 +21,8 @@ public class User {
 	private Date birthDate;
 
 	private List<Address> userAdresses;
+
+	private BigDecimal clientSpendings;
 
 	public String getName() {
 		return name;
@@ -67,5 +70,13 @@ public class User {
 
 	public void setUserAdresses(List<Address> userAdresses) {
 		this.userAdresses = userAdresses;
+	}
+
+	public BigDecimal getClientSpendings() {
+		return clientSpendings;
+	}
+
+	public void setClientSpendings(BigDecimal clientSpendings) {
+		this.clientSpendings = clientSpendings;
 	}
 }
