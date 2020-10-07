@@ -1,5 +1,6 @@
 package br.com.virtual.store.ws.service.impl;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
@@ -30,6 +31,7 @@ public class UserServiceImpl implements UserService {
 	public User createUser(CreateUserDTO userDto) throws CreateUserException {
 		checkIfUserExists(userDto);
 		User entity = new User();
+		entity.setClientSpendings(new BigDecimal(0));
 		BeanUtils.copyProperties(userDto, entity);
 		return userRepository.save(entity);
 	}
