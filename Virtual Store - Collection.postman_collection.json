@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"birthDate\": \"15-07-1998\",\r\n  \"documentNumber\": \"16608010400\",\r\n  \"email\": \"marianegmail@gmail.com\",\r\n  \"name\": \"Mariane Fernanda Da Costa\",\r\n  \"userAdresses\": [\r\n    {\r\n      \"streetName\": \"Rua Jose Bonifacio\",\r\n      \"zipCode\": \"54365061\",\r\n      \"houseNumber\":\"12D\"\r\n    },\r\n    {\r\n      \"streetName\": \"Av Trindade\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"216\"\r\n    }\r\n  ]\r\n}",
+					"raw": "{\r\n  \"birthDate\": \"15-07-1998\",\r\n  \"documentNumber\": \"10821107445\",\r\n  \"email\": \"luan_ricardo2@gmail.com\",\r\n  \"name\": \"Luan Ricardo De Luna Vieira Venancio\",\r\n  \"userAdresses\": [\r\n    {\r\n      \"streetName\": \"Av Encanta Moça\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"408\"\r\n    },\r\n    {\r\n      \"streetName\": \"Av Trindade\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"216\"\r\n    }\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -120,6 +120,75 @@
 			"response": []
 		},
 		{
+			"name": "Get One Client Outgoings - PRD",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\":\"5f7d69aafa598d59ac2e8890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/client",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"spendings",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Outgoing - PRD",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idOutgoing\":\"5f7d69f5fa598d59ac2e8893\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/search/one",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"spendings",
+						"search",
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create User - LocalHost",
 			"request": {
 				"method": "POST",
@@ -202,6 +271,73 @@
 						"v1",
 						"product",
 						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Client Outgoings - LocalHost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\":\"5f7d69aafa598d59ac2e8890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/spendings/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"spendings",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Outgoing - LocalHost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idOutgoing\":\"5f7d69f5fa598d59ac2e8893\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/spendings/search/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"spendings",
+						"search",
+						"one"
 					]
 				}
 			},

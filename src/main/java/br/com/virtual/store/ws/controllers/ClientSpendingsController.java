@@ -33,7 +33,7 @@ public class ClientSpendingsController {
 			List<ClientSpendings> allClientsSpendings = clientSpendingsService.findAllClientsSpendings();
 			return new ResponseEntity<AllClientSpendingsResponse>(
 					new AllClientSpendingsResponse.Builder().withClientSpendings(allClientsSpendings).Build(),
-					HttpStatus.FOUND);
+					HttpStatus.OK);
 		} catch (Exception e2) {
 			return CreateErrorResponse.createGenericResponse(e2);
 		}
@@ -46,7 +46,7 @@ public class ClientSpendingsController {
 					.findClientOutGoingByClientId(getOneClientOutgoingRequest.getClientId());
 			return new ResponseEntity<AllClientSpendingsResponse>(
 					new AllClientSpendingsResponse.Builder().withClientSpendings(clientOutgoings).Build(),
-					HttpStatus.FOUND);
+					HttpStatus.OK);
 		} catch (Exception e2) {
 			return CreateErrorResponse.createGenericResponse(e2);
 		}
@@ -58,7 +58,7 @@ public class ClientSpendingsController {
 			ClientSpendings clientOutgoings = clientSpendingsService
 					.findOneOutgoingById(outGoingRequest.getIdOutgoing());
 			return new ResponseEntity<OutgoingResponse>(
-					new OutgoingResponse.Builder().withClientOutgoing(clientOutgoings).Build(), HttpStatus.FOUND);
+					new OutgoingResponse.Builder().withClientOutgoing(clientOutgoings).Build(), HttpStatus.OK);
 		} catch (Exception e2) {
 			return CreateErrorResponse.createGenericResponse(e2);
 		}
