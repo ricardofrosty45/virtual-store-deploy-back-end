@@ -129,7 +129,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"clientId\":\"5f7d69aafa598d59ac2e8890\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -137,7 +137,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/client",
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/client?idClient=5f7d69aafa598d59ac2e8890",
 					"protocol": "https",
 					"host": [
 						"virtual-store-project-back-end",
@@ -148,6 +148,12 @@
 						"v1",
 						"spendings",
 						"client"
+					],
+					"query": [
+						{
+							"key": "idClient",
+							"value": "5f7d69aafa598d59ac2e8890"
+						}
 					]
 				}
 			},
@@ -155,23 +161,11 @@
 		},
 		{
 			"name": "Get One Outgoing - PRD",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"idOutgoing\":\"5f7d69f5fa598d59ac2e8893\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/search/one",
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/search/one?id=5f7d69f5fa598d59ac2e8893",
 					"protocol": "https",
 					"host": [
 						"virtual-store-project-back-end",
@@ -183,6 +177,12 @@
 						"spendings",
 						"search",
 						"one"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f7d69f5fa598d59ac2e8893"
+						}
 					]
 				}
 			},
