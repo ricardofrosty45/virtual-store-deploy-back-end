@@ -98,18 +98,14 @@ public class CheckRequest {
 		}
 	}
 
-	public void checkGetUserRequests(GetUserDetailRequest getUserRequest) throws GetUserException {
+	public void checkGetUserRequests(String id) throws GetUserException {
 
-		if (getUserRequest == null) {
+		if (id == null) {
 			throw new GetUserException(GetUserEnumErrors.PAYLOAD_IS_NULL.message,
 					GetUserEnumErrors.PAYLOAD_IS_NULL.wrongField, GetUserEnumErrors.PAYLOAD_IS_NULL.errorCode);
 		}
-		if (getUserRequest.getId() == null) {
-			throw new GetUserException(GetUserEnumErrors.ID_IS_NULL.message, GetUserEnumErrors.ID_IS_NULL.wrongField,
-					GetUserEnumErrors.ID_IS_NULL.errorCode);
-		}
-
-		if (getUserRequest.getId().isEmpty()) {
+		
+		if (id.isEmpty()) {
 			throw new GetUserException(GetUserEnumErrors.ID_IS_NULL.message, GetUserEnumErrors.ID_IS_NULL.wrongField,
 					GetUserEnumErrors.ID_IS_NULL.errorCode);
 		}

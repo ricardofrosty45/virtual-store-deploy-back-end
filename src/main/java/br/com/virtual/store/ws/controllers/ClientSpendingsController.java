@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.virtual.store.ws.entities.ClientSpendings;
@@ -40,10 +41,10 @@ public class ClientSpendingsController {
 	}
 
 	@GetMapping("/client")
-	public ResponseEntity<?> getClientOutgoings(@RequestBody GetOneClientOutgoingRequest getOneClientOutgoingRequest) {
+	public ResponseEntity<?> getClientOutgoings(@RequestParam String idClient) {
 		try {
 			List<ClientSpendings> clientOutgoings = clientSpendingsService
-					.findClientOutGoingByClientId(getOneClientOutgoingRequest.getClientId());
+					.findClientOutGoingByClientId(idClient);
 			return new ResponseEntity<AllClientSpendingsResponse>(
 					new AllClientSpendingsResponse.Builder().withClientSpendings(clientOutgoings).Build(),
 					HttpStatus.OK);
@@ -53,10 +54,9 @@ public class ClientSpendingsController {
 	}
 
 	@GetMapping("/search/one")
-	public ResponseEntity<?> getOneOutgoingById(@RequestBody OutgoingRequest outGoingRequest) {
+	public ResponseEntity<?> getOneOutgoingById(@RequestParam String id) {
 		try {
-			ClientSpendings clientOutgoings = clientSpendingsService
-					.findOneOutgoingById(outGoingRequest.getIdOutgoing());
+			ClientSpendings clientOutgoings = clientSpendingsService.findOneOutgoingById(id);
 			return new ResponseEntity<OutgoingResponse>(
 					new OutgoingResponse.Builder().withClientOutgoing(clientOutgoings).Build(), HttpStatus.OK);
 		} catch (Exception e2) {

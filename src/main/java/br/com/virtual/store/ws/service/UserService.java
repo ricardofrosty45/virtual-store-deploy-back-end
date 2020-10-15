@@ -17,6 +17,6 @@ public interface UserService {
 
 	void deleteUser(DeleteUserDTO deleteUserDto);
 
-	User getUser(GetUserDTO getUserDto) throws GetUserException;
+	User getUser(String id) throws GetUserException;
 
 }

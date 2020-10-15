@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.virtual.store.ws.dto.CreateUserDTO;
@@ -25,7 +26,6 @@ import br.com.virtual.store.ws.exceptions.GetUserException;
 import br.com.virtual.store.ws.exceptions.UpdateUserException;
 import br.com.virtual.store.ws.request.CreateUserRequest;
 import br.com.virtual.store.ws.request.DeleteUserRequest;
-import br.com.virtual.store.ws.request.GetUserDetailRequest;
 import br.com.virtual.store.ws.request.UpdateUserRequest;
 import br.com.virtual.store.ws.response.CreateErrorResponse;
 import br.com.virtual.store.ws.response.CreatedUserResponse;
@@ -88,12 +88,10 @@ public class UserController {
 	}
 
 	@GetMapping(consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<?> getUserDetails(@RequestBody GetUserDetailRequest getUserRequestParameter) {
+	public ResponseEntity<?> getUserDetails(@RequestParam String id) {
 		try {
-			new CheckRequest().checkGetUserRequests(getUserRequestParameter);
-			GetUserDTO getUserRequestDto = new GetUserDTO();
-			BeanUtils.copyProperties(getUserRequestParameter, getUserRequestDto);
-			User user = createUserService.getUser(getUserRequestDto);
+			new CheckRequest().checkGetUserRequests(id);
+			User user = createUserService.getUser(id);
 			return new ResponseEntity<GetUserResponse>(
 					new GetUserResponse.Builder().withUserAdresses(user.getUserAdresses()).withName(user.getName())
 							.withId(user.getId()).withDocumentNumber(user.getDocumentNumber())

@@ -64,8 +64,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User getUser(GetUserDTO getUserDto) throws GetUserException {
-		Optional<User> entity = userRepository.findById(getUserDto.getId());
+	public User getUser(String id) throws GetUserException {
+		Optional<User> entity = userRepository.findById(id);
 		if (!entity.isPresent()) {
 			throw new GetUserException(GetUserEnumErrors.ACCOUNT_DOES_NOT_EXIST.message,
 					GetUserEnumErrors.ACCOUNT_DOES_NOT_EXIST.wrongField,
