@@ -87,7 +87,7 @@ public class UserController {
 		}
 	}
 
-	@GetMapping(consumes = { MediaType.APPLICATION_JSON_VALUE })
+	@GetMapping
 	public ResponseEntity<?> getUserDetails(@RequestParam String id) {
 		try {
 			new CheckRequest().checkGetUserRequests(id);
