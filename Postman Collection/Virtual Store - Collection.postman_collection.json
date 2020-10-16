@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "ada26395-a759-48f0-ae6d-0716c605af98",
+		"name": "Virtual Store - Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User - PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"birthDate\": \"15-07-1998\",\r\n  \"documentNumber\": \"10821107445\",\r\n  \"email\": \"luan_ricardo2@gmail.com\",\r\n  \"name\": \"Luan Ricardo De Luna Vieira Venancio\",\r\n  \"userAdresses\": [\r\n    {\r\n      \"streetName\": \"Av Encanta Moça\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"408\"\r\n    },\r\n    {\r\n      \"streetName\": \"Av Trindade\",\r\n      \"zipCode\": \"51011080\",\r\n      \"houseNumber\":\"216\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client - PRD",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"5f7d5c69cf7955046ec1891e\",\r\n   \"name\": \"Luan Ricardo De Luna Vieira\",\r\n   \"birthDate\": \"19-07-1998\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Client - PRD",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"5f8920aab64a933a92e021a7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User - PRD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/user?id=5f7d5c69cf7955046ec1891e",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f7d5c69cf7955046ec1891e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product - PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productDescription\": \"Playstation 5 - In Sale - Brand New Never Used \",\r\n  \"productValue\": 5000,\r\n  \"productName\": \"Playstation 5\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/product",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product - PRD",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/product",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product - PRD",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Product - PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProduct\":\"5f7d68e9fa598d59ac2e888c\",\r\n    \"clientId\":\"5f7d69aafa598d59ac2e8890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com//v1/product/buy",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"",
+						"v1",
+						"product",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Client Spendings - PRD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/all",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"spendings",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Client Outgoings - PRD",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/client?idClient=5f7d69aafa598d59ac2e8890",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"spendings",
+						"client"
+					],
+					"query": [
+						{
+							"key": "idClient",
+							"value": "5f7d69aafa598d59ac2e8890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Outgoing - PRD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://virtual-store-project-back-end.herokuapp.com/v1/spendings/search/one?id=5f7d69f5fa598d59ac2e8893",
+					"protocol": "https",
+					"host": [
+						"virtual-store-project-back-end",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"spendings",
+						"search",
+						"one"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f7d69f5fa598d59ac2e8893"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

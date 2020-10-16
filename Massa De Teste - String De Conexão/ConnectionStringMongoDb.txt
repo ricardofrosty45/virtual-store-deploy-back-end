@@ -1,0 +1,2 @@
+URI Para Conexão Do Mongo Db= mongodb+srv://Virtual-Store-db:rOyPMbgjK1oEAUM0@virtual-store-cluster.zu2w0.mongodb.net/<dbname>?retryWrites=true&w=majority
+Database= Virtual-Store-db
