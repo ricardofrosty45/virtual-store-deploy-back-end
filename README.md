@@ -35,15 +35,15 @@ Abra seu cmd na pasta onde contem o docker file e rode esse comando
 
 - VIRTUAL-STORE-PROJECT
 
-This project was a challege soo i've made a api using Java 11 / Spring boot / Mongodb / Docker
-and the front end i used React js and firebase to make the auths but it's not done yet (front end)
+This project was a challege soo i've made a api using Java 8 / Spring boot / Mongodb / Docker
+and the front end i used React js and firebase to make the auths
 
 Este projeto foi um desafio, então eu desenvolvi esta api usando java 11 / Spring Boot / Mongo Db / Docker
 junto com um front end que ainda nao esta integrado com o nosso back que seria com React js e firebase para os authentications
 
 o front end foi um bonus para poder aplicar em alguma interface e poder consumir os meus endpoints
 
-Segue o link do front end: https://happy-einstein-f483eb.netlify.app/
+Segue o link do front end: https://5f891f6a4c77a9bbfc41dfdf--virtual-store-project.netlify.app/
 
 
 the deploy was made in heroku! here is the endpoints
